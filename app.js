@@ -9,7 +9,7 @@ const reportEl = document.getElementById('report');
 const catchphrasesEl = document.getElementById('catchphrases');
 const catchphraseInput = document.getElementById('catchphrase-input');
 const catchphraseButton = document.getElementById('catchphrase-button');
-console.log(headDropdown);
+// console.log(headDropdown);
 
 // set state for how many times the user changes the head, middle, and bottom
 let headCount = 0;
@@ -20,7 +20,7 @@ let catchphrases = [];
 
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
-    console.log('changing select', headDropdown.value);
+    console.log('changing head', headDropdown.value);
     headEl.style.backgroundImage = `url('./assets/${headDropdown.value}.png')`;
     // increment the head change count state
     headCount++;
@@ -33,12 +33,14 @@ headDropdown.addEventListener('change', () => {
 
 middleDropdown.addEventListener('change', () => {
     // get the value of the middle dropdown
-
+    console.log('changing middle', middleDropdown.value);
     // increment the middle change count state
-    
+    middleCount++;
+    console.log(middleCount);
     // update the dom for the middle (NOTE: use style.backgroundImage on the middleEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    middleEl.style.backgroundImage = `url('./assets/${middleDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 
