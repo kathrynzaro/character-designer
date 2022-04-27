@@ -1,1 +1,13 @@
 /* add home page styles here */
+#head {
+    background-image: url(../assets/duck-head.png);
+}
+
+#middle {
+    background-image: url(../assets/pink-middle.png);
+}
+
+
+#bottom {
+    background-image: url(../assets/blue-pants.png);
+}
