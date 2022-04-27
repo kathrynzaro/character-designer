@@ -21,11 +21,10 @@ let catchphrases = [];
 headDropdown.addEventListener('change', () => {
     // get the value of the head dropdown
     console.log('changing head', headDropdown.value);
-    headEl.style.backgroundImage = `url('./assets/${headDropdown.value}.png')`;
     // increment the head change count state
     headCount++;
     // update the dom for the head (use style.backgroundImage on the headEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    headEl.style.backgroundImage = `url('./assets/${headDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
     displayStats();
 });
@@ -46,17 +45,18 @@ middleDropdown.addEventListener('change', () => {
 
 bottomDropdown.addEventListener('change', () => {
     // get the value of the bottom dropdown
-
+    console.log('changing bottom', bottomDropdown.value);
     // increment the bottom change count state
-    
+    bottomCount++;
+    console.log(bottomCount);
     // update the dom for the bottom (NOTE use style.backgroundImage on the bottomEl div instead of trying to set the .src -- it's NOT an img tag!)
-
+    bottomEl.style.backgroundImage = `url('./assets/${bottomDropdown.value}.png')`;
     // update the stats to show the new count (call displayStats() to do this work)
+    displayStats();
 });
 
 catchphraseButton.addEventListener('click', () => {
     // get the value of the catchphrase input
-    
     // push the new catchphrase to the catchphrase array in state
 
     // clear out the form input's value so it's empty to the user
