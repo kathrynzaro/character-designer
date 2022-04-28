@@ -68,13 +68,14 @@ catchphraseButton.addEventListener('click', () => {
 
 function displayStats() {
     // text content of the reportEl to tell the user how many times they've changed each piece of the state
+    reportEl.textContent = `You have changed the head of your creation ${headCount} times, the middle ${middleCount} times, and the bottom ${bottomCount} times. Congratulations! You don't win anything.`;
 }
 
 function displayCatchphrases() {
     // clear out the DOM for the currently displayed catchphrases
-
+    catchphrasesEl.textContent = '';
     // loop through each catchphrase in state
-   
+    
     // and for each catchphrase
     
     // create an HTML element with the catchphrase as its text content
